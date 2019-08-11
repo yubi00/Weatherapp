@@ -6,9 +6,7 @@ const axios = require('axios');
 router.get('/', (req, res)=> {
     res.render('home', {
         title: 'Weather App',
-        cityinfo: '',
-        city: '',
-        temp: ''
+        userValue: ''
     })
 })
 
@@ -24,8 +22,8 @@ router.post('/', async (req, res) => {
 
     res.render('home', {
         title: 'Weather App',
-        cityinfo: 'City Info',
         city: response.data.name,
+        userValue: city,
         temp: celsiustemp(response.data.main.temp)
     })
     
