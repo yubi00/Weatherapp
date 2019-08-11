@@ -6,6 +6,7 @@ const axios = require('axios');
 router.get('/', (req, res)=> {
     res.render('home', {
         title: 'Weather App',
+        cityinfo: '',
         city: '',
         temp: ''
     })
