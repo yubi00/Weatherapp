@@ -9,21 +9,17 @@
 </head>
 <body>
     <h1><%= title %></h1>
-   <form method="POST" action="/" onsubmit="showInfo()"> 
+   <form method="POST" action="/"> 
         <label>City</label>
         <input type="text" name='cityname'>
         <input type="submit" value="Submit" />
    </form>
-   <div id="info">
-        <h2><%= cityinfo %></h1>
-    <p>City: <%= city %></p>
-    <p>Temperature: <%= temp %>°C</p>
-   </div>
-   
-   <script>
-       function showInfo() {
-             document.getElementById("info").style.display = "block";
-       }
-   </script>
+    <% if (userValue) { %>
+        <div id="info">
+            <p>City: <%= city %></p>
+            <p>Temperature: <%= temp %>°C</p>
+        </div>
+    <% } %>
+
 </body>
 </html>
