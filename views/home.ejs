@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/mystyles.css">
+</head>
+<body>
+    <h1><%= title %></h1>
+   <form method="POST" action="/" onsubmit="showInfo()"> 
+        <label>City</label>
+        <input type="text" name='cityname'>
+        <input type="submit" value="Submit" />
+   </form>
+   <div id="info">
+        <h2><%= cityinfo %></h1>
+    <p>City: <%= city %></p>
+    <p>Temperature: <%= temp %>°C</p>
+   </div>
+   
+   <script>
+       function showInfo() {
+             document.getElementById("info").style.display = "block";
+       }
+   </script>
+</body>
+</html>
